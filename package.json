@@ -22,6 +22,7 @@
     "url": "https://github.com/florianbuehler/spotify/issues"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.10",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0"
