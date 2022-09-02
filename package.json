@@ -1,9 +1,25 @@
 {
-  "private": true,
+  "name": "portfolio",
+  "description": "Spotify clone",
+  "version": "1.0.0",
+  "author": "Florian Bühler <florian-buehler@outlook.com>",
+  "keywords": [
+    "spotify",
+    "next.js",
+    "tailwind css"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/florianbuehler/spotify"
+  },
+  "bugs": {
+    "url": "https://github.com/florianbuehler/spotify/issues"
   },
   "dependencies": {
     "next": "latest",
