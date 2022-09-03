@@ -7,11 +7,15 @@ import {
   PlusCircleIcon,
   RssIcon
 } from '@heroicons/react/24/outline';
+import { signOut } from 'next-auth/react';
 
 const Sidebar: React.FC = () => {
   return (
     <nav className="text-gray-500 p-5 text-sm border-r border-gray-900">
       <div className="space-y-4">
+        <button className="flex items-center space-x-2 hover:text-white" onClick={() => signOut()}>
+          <span>Logout</span>
+        </button>
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
           <span>Home</span>
