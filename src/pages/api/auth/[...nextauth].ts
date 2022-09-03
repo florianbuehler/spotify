@@ -1,6 +1,6 @@
-import NextAuth from "next-auth"
-import SpotifyProvider from "next-auth/providers/spotify"
-import {LOGIN_URL} from "../../../utils/spotify";
+import NextAuth from 'next-auth';
+import SpotifyProvider from 'next-auth/providers/spotify';
+import { LOGIN_URL } from '../../../utils/spotify';
 
 export default NextAuth({
   providers: [
@@ -9,5 +9,5 @@ export default NextAuth({
       clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
       authorization: LOGIN_URL
     })
-  ],
-})
+  ]
+});

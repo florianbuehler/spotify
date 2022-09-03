@@ -1,4 +1,4 @@
-import SpotifyWebApi from "spotify-web-api-node"
+import SpotifyWebApi from 'spotify-web-api-node';
 
 const scopes = [
   'playlist-read-private',
@@ -13,19 +13,19 @@ const scopes = [
   'user-read-currently-playing',
   'user-read-recently-played',
   'user-follow-read'
-].join(',')
+].join(',');
 
 const params = {
   scope: scopes
-}
+};
 
-const queryParamString = new URLSearchParams(params)
+const queryParamString = new URLSearchParams(params);
 
-export const LOGIN_URL = `https://accounts.spotify.com/authorize?${queryParamString.toString()}`
+export const LOGIN_URL = `https://accounts.spotify.com/authorize?${queryParamString.toString()}`;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
   clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET
-})
+});
 
-export default spotifyApi
+export default spotifyApi;
