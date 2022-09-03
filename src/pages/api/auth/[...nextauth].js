@@ -1,5 +1,6 @@
 import NextAuth from "next-auth"
 import SpotifyProvider from "next-auth/providers/spotify"
+import {LOGIN_URL} from "../../../utils/spotify";
 
 export default NextAuth({
   providers: [
