@@ -37,13 +37,15 @@ const Center: React.FC = () => {
       }
     };
 
-    void getPlaylist();
+    if (spotifyApi.getAccessToken()) {
+      void getPlaylist();
+    }
   }, [spotifyApi, playlistId, setPlaylist]);
 
   return (
     <div className="flex-grow">
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white padding-8`}
+        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8`}
       >
         <img
           src={playlist?.images?.[0]?.url}
