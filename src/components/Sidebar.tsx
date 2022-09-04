@@ -7,9 +7,13 @@ import {
   PlusCircleIcon,
   RssIcon
 } from '@heroicons/react/24/outline';
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 
 const Sidebar: React.FC = () => {
+  const { data: session, status } = useSession();
+
+  console.log(session);
+
   return (
     <nav className="text-gray-500 p-5 text-sm border-r border-gray-900">
       <div className="space-y-4">
