@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Sidebar } from '../components';
+import { Center, Header, Sidebar } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -9,8 +9,10 @@ const Home: NextPage = () => {
         <title>Spotify Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <Header />
+      <main className="flex">
         <Sidebar />
+        <Center />
       </main>
     </div>
   );
