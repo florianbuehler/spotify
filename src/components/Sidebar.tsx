@@ -8,25 +8,26 @@ import {
   RssIcon
 } from '@heroicons/react/24/outline';
 import { signOut, useSession } from 'next-auth/react';
+import { useRecoilState } from 'recoil';
+import { playlistIdState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
 import PlaylistObjectSimplified = SpotifyApi.PlaylistObjectSimplified;
 
 const Sidebar: React.FC = () => {
   const spotifyApi = useSpotifyApi();
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   const [playlists, setPlaylists] = useState<PlaylistObjectSimplified[]>([]);
+  const [, setPlaylistId] = useRecoilState(playlistIdState);
 
   useEffect(() => {
-    const getUserPlaylist = async () => {
+    const getUserPlaylists = async () => {
       const data = await spotifyApi.getUserPlaylists();
 
       setPlaylists(data.body.items);
     };
 
-    if (spotifyApi.getAccessToken()) {
-      void getUserPlaylist();
-    }
+    void getUserPlaylists();
   }, [session, spotifyApi]);
 
   return (
@@ -63,7 +64,11 @@ const Sidebar: React.FC = () => {
         <hr className="border-t-[0.1px] border-gray-900" />
 
         {playlists.map((playlist) => (
-          <p key={playlist.id} className="cursor-pointer hover:text-white">
+          <p
+            key={playlist.id}
+            className="cursor-pointer hover:text-white"
+            onClick={() => setPlaylistId(playlist.id)}
+          >
             {playlist.name}
           </p>
         ))}
