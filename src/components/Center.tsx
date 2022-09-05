@@ -3,7 +3,7 @@ import { shuffle } from 'lodash';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
-import SinglePlaylistResponse = SpotifyApi.SinglePlaylistResponse;
+import Songs from './Songs';
 
 const colors = [
   'from-indigo-500',
@@ -43,7 +43,7 @@ const Center: React.FC = () => {
   }, [spotifyApi, playlistId, setPlaylist]);
 
   return (
-    <div className="flex-grow">
+    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide">
       <section
         className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8`}
       >
@@ -57,6 +57,8 @@ const Center: React.FC = () => {
           <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold">{playlist?.name}</h1>
         </div>
       </section>
+
+      <Songs />
     </div>
   );
 };
