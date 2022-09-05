@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/react';
 import Head from 'next/head';
-import { Center, Header, Sidebar } from '../components';
+import {Center, Header, Player, Sidebar} from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         <Sidebar />
         <Center />
       </main>
+      <Player />
     </div>
   );
 };
