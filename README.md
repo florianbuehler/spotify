@@ -22,14 +22,10 @@
   Spotify Remote
 </h1>
 
-
-## About
-
 A small *Spotify* clone, implementing the Spotify authentication, playlists and music playback.
 
 *Note:* Due to the limitations of the spotify API
 
-## Development
 
 ## 🚀 Getting started
 
