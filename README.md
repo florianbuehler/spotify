@@ -1,3 +1,7 @@
+<h1 align="center">
+  Spotify Remote
+</h1>
+
 <p align="center">
     <a href="https://nextjs.org/" alt="Next.js">
         <img src="https://img.shields.io/badge/framework-Next.js-61dbfb" />
@@ -18,9 +22,6 @@
         <img src="https://img.shields.io/badge/code_style-Prettier-ff69b4" />
     </a>
 </p>
-<h1 align="center">
-  Spotify Remote
-</h1>
 
 A small *Spotify* clone, implementing the Spotify authentication, playlists and music playback.
 
