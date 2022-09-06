@@ -53,11 +53,11 @@ const Sidebar: React.FC = () => {
           <span>Create Playlist</span>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <HeartIcon className="h-5 w-5" />
+          <HeartIcon className="h-5 w-5 text-blue-500" />
           <span>Liked Songs</span>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <RssIcon className="h-5 w-5" />
+          <RssIcon className="h-5 w-5 text-green-500" />
           <span>Your Episodes</span>
         </button>
         <hr className="border-t-[0.1px] border-gray-900" />
