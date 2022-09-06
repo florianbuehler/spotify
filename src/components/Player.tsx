@@ -46,9 +46,9 @@ const Player: React.FC = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedAdjustVolume = useCallback(
-    debounce((volume) => {
+    debounce(async (volume) => {
       try {
-        spotifyApi.setVolume(volume);
+        await spotifyApi.setVolume(volume);
       } catch (error) {
         console.error('Something went wrong setting the volume - error:', error);
       }
@@ -57,7 +57,6 @@ const Player: React.FC = () => {
   );
 
   useEffect(() => {
-    console.log('adjusting volume - volume:', volume);
     debouncedAdjustVolume(volume);
   }, [debouncedAdjustVolume, volume]);
 
@@ -79,13 +78,15 @@ const Player: React.FC = () => {
       <div className="grid grid-cols-3 text-xs md:text-base h-24 bg-gradient-to-b from-black to-gray-900 text-white px-2 md:px-8">
         <div className="flex items-center space-x-4">
           <img
-            className="hidden md:inline h-10 w-10"
+            className="hidden md:inline h-12 w-12"
             src={songInfo?.album.images?.[0]?.url}
             alt="cover"
           />
           <div>
             <h3>{songInfo?.name}</h3>
-            <p>{songInfo?.artists?.[0]?.name}</p>
+            <p className="text-xs text-gray-500">
+              {songInfo?.artists?.map((artist) => artist.name).join(', ')}
+            </p>
           </div>
         </div>
 

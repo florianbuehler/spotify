@@ -33,7 +33,7 @@ const Sidebar: React.FC = () => {
   }, [session, spotifyApi]);
 
   return (
-    <nav className="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex mb-36">
+    <nav className="text-gray-500 p-5 text-xs lg:text-sm border-r-[0.5px] border-gray-800 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex mb-36">
       <div className="space-y-4">
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
@@ -47,7 +47,7 @@ const Sidebar: React.FC = () => {
           <BuildingLibraryIcon className="h-5 w-5" />
           <span>Your Library</span>
         </button>
-        <hr className="border-t-[0.1px] border-gray-900" />
+        <hr className="border-t-[0.5px] border-gray-800" />
         <button className="flex items-center space-x-2 hover:text-white">
           <PlusCircleIcon className="h-5 w-5" />
           <span>Create Playlist</span>
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
           <RssIcon className="h-5 w-5 text-green-500" />
           <span>Your Episodes</span>
         </button>
-        <hr className="border-t-[0.1px] border-gray-900" />
+        <hr className="border-t-[0.5px] border-gray-800" />
 
         {playlists.map((playlist) => (
           <p

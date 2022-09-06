@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/react';
 import Head from 'next/head';
-import {Center, Header, Player, Sidebar} from '../components';
+import { Header, Player, Playlist, Sidebar } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Header />
       <main className="flex">
         <Sidebar />
-        <Center />
+        <Playlist />
       </main>
       <Player />
     </div>

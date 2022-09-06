@@ -15,7 +15,7 @@ const colors = [
   'from-purple-500'
 ];
 
-const Center: React.FC = () => {
+const Playlist: React.FC = () => {
   const spotifyApi = useSpotifyApi();
 
   const [color, setColor] = useState<string | null>(null);
@@ -63,4 +63,4 @@ const Center: React.FC = () => {
   );
 };
 
-export default Center;
+export default Playlist;
