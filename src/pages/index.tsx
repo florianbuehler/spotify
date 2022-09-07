@@ -8,8 +8,8 @@ const Home: NextPage = () => {
   return (
     <div className="bg-black h-screen overflow-hidden">
       <Head>
-        <title>Spotify Clone</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Spotify Remote</title>
+        <link rel="icon" href="/logo.svg" />
       </Head>
       <Header />
       <main className="flex">

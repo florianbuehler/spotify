@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react';
 import { useRecoilState } from 'recoil';
 import { playlistIdState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
-import { SidebarButton } from './index';
+import { Logo, SidebarButton } from './index';
 import PlaylistObjectSimplified = SpotifyApi.PlaylistObjectSimplified;
 
 const Sidebar: React.FC = () => {
@@ -36,6 +36,13 @@ const Sidebar: React.FC = () => {
   return (
     <nav className="text-gray-500 p-5 text-xs lg:text-sm border-r-[0.5px] border-gray-800 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex mb-36">
       <div className="space-y-4">
+        <div className="flex items-center justify-center mt-6 mb-10">
+          <Logo className="h-16 w-16 text-gray-500" />
+          <div>
+            <h1 className="text-gray-500 text-lg ml-4 font-bold">Spotify</h1>
+            <h1 className="text-gray-500 text-lg ml-10 mt-[-0.5rem] font-bold">Remote</h1>
+          </div>
+        </div>
         <SidebarButton>
           <HomeIcon className="h-5 w-5" />
           <span>Home</span>
