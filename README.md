@@ -23,6 +23,7 @@
     </a>
 </p>
 
+
 A small *Spotify* clone, implementing the Spotify authentication, playlists and music playback.
 
 *Note:* Due to the limitations of the spotify API
@@ -30,12 +31,11 @@ A small *Spotify* clone, implementing the Spotify authentication, playlists and 
 
 ## 🚀 Getting started
 
-To get started, first clone the project using
+If you want to play around with the code yourself - feel free to do so 🧑🏻‍💻. First clone the project using
 ```shell script
-git clone https://github.com/florianbuehler/spotify.git
+git clone https://github.com/florianbuehler/spotify-remote.git
 ```
-
-and then navigate into the root folder of the project and run
+(or alternatively using SSH and `git@github.com:florianbuehler/spotify-remote.git`) and then navigate into the root folder of the project and run
 ```shell script
 npm install
 ```
@@ -44,11 +44,11 @@ to install the required packages into the `node_modules` folder.
 
 ## 🔧 Development
 
-Run
+To start the development server with hot reload configured, run
 ```shell script
 npm run dev
 ```
-to start the development server on `http://localhost:3000`.
+and then navigate to `http://localhost:3000` in your Browser.
 
 To help ensuring some basic formatting and code quality standards, the project has prettier and eslint configured. So you can simply use
 ```shell script
