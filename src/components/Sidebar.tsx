@@ -11,6 +11,7 @@ import { useSession } from 'next-auth/react';
 import { useRecoilState } from 'recoil';
 import { playlistIdState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
+import { SidebarButton } from './index';
 import PlaylistObjectSimplified = SpotifyApi.PlaylistObjectSimplified;
 
 const Sidebar: React.FC = () => {
@@ -35,31 +36,31 @@ const Sidebar: React.FC = () => {
   return (
     <nav className="text-gray-500 p-5 text-xs lg:text-sm border-r-[0.5px] border-gray-800 overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex mb-36">
       <div className="space-y-4">
-        <button className="flex items-center space-x-2 hover:text-white">
+        <SidebarButton>
           <HomeIcon className="h-5 w-5" />
           <span>Home</span>
-        </button>
-        <button className="flex items-center space-x-2 hover:text-white">
+        </SidebarButton>
+        <SidebarButton>
           <MagnifyingGlassIcon className="h-5 w-5" />
           <span>Search</span>
-        </button>
-        <button className="flex items-center space-x-2 hover:text-white">
+        </SidebarButton>
+        <SidebarButton>
           <BuildingLibraryIcon className="h-5 w-5" />
           <span>Your Library</span>
-        </button>
+        </SidebarButton>
         <hr className="border-t-[0.5px] border-gray-800" />
-        <button className="flex items-center space-x-2 hover:text-white">
+        <SidebarButton>
           <PlusCircleIcon className="h-5 w-5" />
           <span>Create Playlist</span>
-        </button>
-        <button className="flex items-center space-x-2 hover:text-white">
+        </SidebarButton>
+        <SidebarButton>
           <HeartIcon className="h-5 w-5 text-blue-500" />
           <span>Liked Songs</span>
-        </button>
-        <button className="flex items-center space-x-2 hover:text-white">
+        </SidebarButton>
+        <SidebarButton>
           <RssIcon className="h-5 w-5 text-green-500" />
           <span>Your Episodes</span>
-        </button>
+        </SidebarButton>
         <hr className="border-t-[0.5px] border-gray-800" />
 
         {playlists.map((playlist) => (

@@ -1,6 +1,6 @@
 import React from 'react';
-import {useRecoilState, useRecoilValue} from 'recoil';
-import {currentTrackIdState, isPlayingState, playlistState} from '../atoms';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { currentTrackIdState, isPlayingState, playlistState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
 import { millisToMinutesAndSeconds } from '../utils/time';
 import PlaylistTrackObject = SpotifyApi.PlaylistTrackObject;
@@ -14,7 +14,7 @@ const Song: React.FC<Props> = ({ order, track }) => {
   const spotifyApi = useSpotifyApi();
   const [, setCurrentTrackId] = useRecoilState(currentTrackIdState);
   const [, setIsPlaying] = useRecoilState(isPlayingState);
-  const currentPlaylist = useRecoilValue(playlistState)
+  const currentPlaylist = useRecoilValue(playlistState);
 
   const playSong = () => {
     if (track.track) {
@@ -44,8 +44,10 @@ const Song: React.FC<Props> = ({ order, track }) => {
       </div>
 
       {/*<div className="flex items-center justify-between ml-auto md:ml-0">*/}
-        <p className="self-center w-80 hidden md:inline">{track.track?.album.name}</p>
-        <p className="self-center justify-self-end">{millisToMinutesAndSeconds(track.track?.duration_ms)}</p>
+      <p className="self-center w-80 hidden md:inline">{track.track?.album.name}</p>
+      <p className="self-center justify-self-end">
+        {millisToMinutesAndSeconds(track.track?.duration_ms)}
+      </p>
       {/*</div>*/}
     </div>
   );

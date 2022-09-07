@@ -108,7 +108,7 @@ const Player: React.FC = () => {
             onClick={() => volume > 0 && setVolume((prevVol) => Math.max(prevVol - 10, 0))}
           />
           <input
-            className="w-14 md:w-28"
+            className="w-14 md:w-28 cursor-pointer"
             type="range"
             value={volume}
             min={0}

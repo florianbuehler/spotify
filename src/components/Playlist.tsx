@@ -53,7 +53,7 @@ const Playlist: React.FC = () => {
           className="h-44 w-44 shadow-2xl"
         />
         <div>
-          <p className="uppercase">Playlist</p>
+          <p className="uppercase text-gray-500">Playlist</p>
           <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold">{playlist?.name}</h1>
         </div>
       </section>
