@@ -1,4 +1,6 @@
-# Spotify Remote
+<h1 align="center">
+  Spotify Remote
+</h1>
 
 <p align="center">
     <a style="text-decoration: none" href="https://nextjs.org/" alt="Next.js">
@@ -21,20 +23,12 @@
     </a>
 </p>
 
-
-## About
-
 A small *Spotify* clone, implementing the Spotify authentication, playlists and music playback.
 
 *Note:* Due to the limitations of the spotify API
 
 
-## Technology
-
-
-## Development
-
-### Getting started
+## 🚀 Getting started
 
 To get started, first clone the project using
 ```shell script
@@ -48,7 +42,7 @@ npm install
 to install the required packages into the `node_modules` folder.
 
 
-### Local development
+## 🔧 Development
 
 Run
 ```shell script
@@ -67,4 +61,4 @@ npm run fix-eslint
 to let eslint fix it automatically where possible.
 
 
-### Deployment
+## 💫 Deployment
