@@ -6,7 +6,6 @@ export const playlistIdState = atom({
   default: '37i9dQZF1DX5trt9i14X7j'
 });
 
-export const playlistState = atom<SinglePlaylistResponse | null>({
-  key: 'playlistState',
-  default: null
+export const playlistState = atom<SinglePlaylistResponse | undefined>({
+  key: 'playlistState'
 });

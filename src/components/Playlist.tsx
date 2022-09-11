@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { shuffle } from 'lodash';
+import _ from 'lodash';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms';
 import { useSpotifyApi } from '../hooks';
@@ -23,7 +23,7 @@ const Playlist: React.FC = () => {
   const [playlist, setPlaylist] = useRecoilState(playlistState);
 
   useEffect(() => {
-    setColor(shuffle(colors).pop()!);
+    setColor(_.shuffle(colors).pop()!);
   }, [playlistId]);
 
   useEffect(() => {

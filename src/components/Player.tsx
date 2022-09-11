@@ -9,7 +9,7 @@ import {
   PlayIcon,
   SpeakerWaveIcon as VolumeUpIcon
 } from '@heroicons/react/24/solid';
-import { debounce } from 'lodash';
+import _ from 'lodash';
 import { useSession } from 'next-auth/react';
 import { useRecoilState } from 'recoil';
 import { currentTrackIdState, isPlayingState } from '../atoms';
@@ -46,7 +46,7 @@ const Player: React.FC = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedAdjustVolume = useCallback(
-    debounce(async (volume) => {
+    _.debounce(async (volume) => {
       try {
         await spotifyApi.setVolume(volume);
       } catch (error) {
