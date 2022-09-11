@@ -44,11 +44,11 @@ to install the required packages into the `node_modules` folder.
 
 ## 🔧 Development
 
-To start the development server with hot reload configured, run
+Start the development server with hot reload configured with
 ```shell script
 npm run dev
 ```
-and then navigate to `http://localhost:3000` in your browser.
+and then navigate to `http://localhost:3000` in your browser to view the latest changes.
 
 To help ensuring some basic formatting and code quality standards, the project has prettier and eslint configured. So you can simply use
 ```shell script
@@ -62,3 +62,12 @@ to let eslint fix it automatically where possible.
 
 
 ## 💫 Deployment
+
+Build an optimized and production ready version of the project with
+```shell script
+npm run build
+```
+The production build is located in the *./next* directory and can be served by running
+```shell script
+npm run start
+```
