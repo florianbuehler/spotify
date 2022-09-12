@@ -1,7 +1,8 @@
 import { atom } from 'recoil';
 
 export const currentTrackIdState = atom<string | undefined>({
-  key: 'currentTrackIdState'
+  key: 'currentTrackIdState',
+  default: undefined
 });
 
 export const isPlayingState = atom<boolean>({
