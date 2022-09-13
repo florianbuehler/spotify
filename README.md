@@ -24,9 +24,9 @@
 </p>
 
 
-A small *Spotify* clone, implementing the Spotify authentication, playlists and music playback.
+Wanted to learn Next.js for some time, I followed their official tutorial, watched one or two more, and then practiced by creating this **_Spotify Remote_**, which let's you authenticate via Spotify OAuth, and watch and control your Spotify playlists.
 
-*Note:* Due to the limitations of the spotify API
+**Note:** Since the Spotify API is not a dedicated player, and only allows remote control, an active device (e.g. the Spotify app on your phone or browser) needs to be open for the app to work.
 
 
 ## 🚀 Getting started
