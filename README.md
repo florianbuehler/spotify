@@ -50,7 +50,7 @@ npm run dev
 ```
 and then navigate to `http://localhost:3000` in your browser to view the latest changes.
 
-To help ensuring some basic formatting and code quality standards, the project has prettier and eslint configured. So you can simply use
+To help ensuring some basic formatting and code quality standards, the project has prettier and eslint configured. That's why you can simply use
 ```shell script
 npm run eslint
 ```
@@ -67,7 +67,7 @@ Build an optimized and production ready version of the project with
 ```shell script
 npm run build
 ```
-The production build is located in the *./next* directory and can be served by running
+The production build is located in the *./.next* directory and can be served by running
 ```shell script
 npm run start
 ```
